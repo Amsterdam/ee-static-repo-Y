@@ -1,0 +1,15 @@
+name: Import Docs Workflow
+
+on:
+  repository_dispatch:
+    types: [import_docs]
+
+jobs:
+  importDocs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Run import-docs
+        run: npm run import-docs  # Dit is een voorbeeld. Je kunt hier elk gewenst script draaien.
